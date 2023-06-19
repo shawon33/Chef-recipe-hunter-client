@@ -16,9 +16,9 @@ const Header = () => {
 
                      <Link to='/' className="py-2 text-decoration-none">Home</Link>
 
-                     <Nav.Link href="#pricing">About</Nav.Link>
-                     <Nav.Link href="#pricing">About</Nav.Link>
-                     <Nav.Link href="#pricing">About</Nav.Link>
+                     <Nav.Link href="#pricing">Blogs</Nav.Link>
+         
+                     
                   </Nav>
                   <Nav>
                      <Link to='/login'><Button variant="secondary">Login</Button></Link>
