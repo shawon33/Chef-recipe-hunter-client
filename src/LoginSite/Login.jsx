@@ -1,14 +1,38 @@
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthContext/AuthProvider";
+import { useContext } from "react";
 
 
 const Login = () => {
+    const {signIn}= useContext(AuthContext);
+   
+
+    const handelLogin = event =>{
+
+        event.preventDefault(); 
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email,password);
+
+        signIn(email,password)
+        .then(result=>{
+            const loggedUser =result.user;
+            console.log(loggedUser);
+     
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
+    }
     return (
         <Container className='w-50 mx-auto'>
 
             <h3>Please Login</h3>
 
-            <Form>
+            <Form onSubmit={handelLogin}>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>

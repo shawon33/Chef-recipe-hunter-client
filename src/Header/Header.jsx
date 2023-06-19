@@ -1,6 +1,6 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaGulp} from 'react-icons/fa';
+// import { FaGulp} from 'react-icons/fa';
 
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
          
          <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
             <Container>
-               <h1 className="text-success"><FaGulp className="pb-2"></FaGulp>Coo<span className="text-warning">ked</span></h1>
+               {/* <h1 className="text-success"><FaGulp className="pb-2"></FaGulp>Coo<span className="text-warning">ked</span></h1> */}
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="mx-auto">
@@ -17,8 +17,7 @@ const Header = () => {
                      <Link to='/' className="py-2 text-decoration-none">Home</Link>
 
                      <Nav.Link href="#pricing">Blogs</Nav.Link>
-         
-                     
+     
                   </Nav>
                   <Nav>
                      <Link to='/login'><Button variant="secondary">Login</Button></Link>
