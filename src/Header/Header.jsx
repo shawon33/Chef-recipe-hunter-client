@@ -12,9 +12,13 @@ const Header = () => {
                <h1 className="text-success"><FaGulp className="pb-2"></FaGulp>Coo<span className="text-warning">ked</span></h1>
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="mx-auto">
+                  <Nav className="mx-auto gap-2 ">
 
                      <Link to='/' className="py-2 text-decoration-none">Home</Link>
+
+                     <Link to='/healthTips' className="py-2 text-decoration-none ml-2">Good Health & Tips</Link>
+
+                     <Nav.Link href="#pricing">Blogs</Nav.Link>
 
                      <Nav.Link href="#pricing">Blogs</Nav.Link>
      

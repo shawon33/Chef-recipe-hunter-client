@@ -4,6 +4,7 @@ import Home from "../Home/Home";
 import Login from "../LoginSite/Login";
 import Register from "../LoginSite/Register";
 import Error from "../Header/ErrorPage/Error";
+import HealthTips from "../Home/ExtraSection/HealthTips";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         {
           path:'/',
           element:<Home></Home>
+        },
+        {
+           path:'healthTips',
+           element:<HealthTips></HealthTips>
         },
         {
           path:'login',
