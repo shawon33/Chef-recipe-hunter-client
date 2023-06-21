@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 const HealthTips = () => {
     return (
         <Container>
-            <div className="">
+            <div className=" mt-5 ">
                 <h1 className="text-success">Balanced Diet:</h1>
                 <p className="">Follow a balanced and nutritious diet that includes a variety of fruits, vegetables,
                     whole grains, lean proteins, and healthy fats. Limit your intake of processed foods,
