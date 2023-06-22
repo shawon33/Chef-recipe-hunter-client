@@ -22,7 +22,7 @@ const HealthTips = () => {
                 <p>Engage in regular physical activity that suits your fitness level and preferences. Aim for at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous exercise per week. Include strength training exercises to maintain muscle mass and flexibility exercises for mobility.</p>
                 <p>Exercise can help prevent excess weight gain or help maintain weight loss. When you engage in physical activity, you burn calories. The more intense the activity, the more calories you burn.
 
-                    Regular trips to the gym are great, but don't worry if you can't find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.</p>
+                    Regular trips to the gym are great, but do not worry if you can not find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.</p>
             </div>
             <div>
                 <h1 className="text-success">Sufficient Sleep</h1>
@@ -35,7 +35,7 @@ const HealthTips = () => {
                 <h1 className="text-success">Stress Management:</h1>
                 <p>Stress management offers a range of strategies to help you better deal with stress and difficulty (adversity) in your life. Managing stress can help you lead a more balanced, healthier life.
 
-                    Stress is an automatic physical, mental and emotional response to a challenging event. It's a normal part of everyone's life. When used positively, stress can lead to growth, action and change. But negative, long-term stress can lessen your quality of life.</p>
+                    Stress is an automatic physical, mental and emotional response to a challenging event. It is a normal part of everyone life. When used positively, stress can lead to growth, action and change. But negative, long-term stress can lessen your quality of life.</p>
                 <p>Find healthy ways to manage stress, such as practicing relaxation techniques (e.g., deep breathing, meditation, yoga), engaging in hobbies, spending time with loved ones, or seeking professional help if needed.</p>
             </div>
             <div>
@@ -69,7 +69,7 @@ const HealthTips = () => {
                 <h1 className="text-success">Positive Social Connections :</h1>
                 <p> Foster healthy relationships and social connections. Surround yourself with supportive and positive individuals who contribute to your well-being.
 
-                    Remember, everyone's health needs are uniq</p>
+                    Remember, everyone health needs are uniq</p>
             </div>
         </Container>
     );
