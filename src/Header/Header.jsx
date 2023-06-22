@@ -1,9 +1,18 @@
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaGulp} from 'react-icons/fa';
+import { FaGulp, FaUserCircle} from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext/AuthProvider";
 
 
 const Header = () => {
+   const {user,logOut} =useContext(AuthContext);
+
+    const handleLogOut =()=>{
+        logOut()
+        .then()
+        .catch(error=> console.log(error))
+    }
    return (
       <Container className="mt-4">
          
@@ -24,10 +33,8 @@ const Header = () => {
                      <Nav.Link href="#pricing">Blogs</Nav.Link>
      
                   </Nav>
+                  
                   <Nav>
-                     <Link to='/login'><Button variant="secondary">Login</Button></Link>
-                  </Nav>
-                  {/* <Nav>
                      {
                         user && <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
                      }
@@ -37,7 +44,7 @@ const Header = () => {
                            <Button onClick={handleLogOut} variant="secondary">LogOut</Button> :
                            <Link to='/login'><Button variant="secondary">Login</Button></Link>
                      }
-                  </Nav> */}
+                  </Nav>
                </Navbar.Collapse>
             </Container>
          </Navbar>
