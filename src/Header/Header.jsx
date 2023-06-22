@@ -26,11 +26,11 @@ const Header = () => {
                      <Link to='/' className="py-2 text-decoration-none">Home</Link>
 
                      <Link to='/healthTips' className="py-2 text-decoration-none ml-2">Good Health & Tips</Link>
+
                      <Link to='/makingTips' className="py-2 text-decoration-none ml-2">Food Making Tips</Link>
 
-                     <Nav.Link href="#pricing">Blogs</Nav.Link>
+                     <Link to='/blogs' className="py-2 text-decoration-none ml-2">Blogs</Link>
 
-                     <Nav.Link href="#pricing">Blogs</Nav.Link>
      
                   </Nav>
                   

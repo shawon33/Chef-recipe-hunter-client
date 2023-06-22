@@ -19,6 +19,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Peanut Butter and Jelly Sandwich:</Card.Title>
                                 <Card.Text>
                                     <img src={img4} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p>Spread peanut butter on one slice of bread and jelly on another slice, then press the slices together.</p>
                                 </Card.Text>
                             </Card.Body>
@@ -32,6 +33,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Tuna Salad</Card.Title>
                                 <Card.Text>
                                     <img src={img5} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p>Combine canned tuna, mayonnaise, diced onions, and any other desired ingredients in a bowl. Mix well and serve.</p>
                                 </Card.Text>
                             </Card.Body>
@@ -44,6 +46,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Fruit Smoothie</Card.Title>
                                 <Card.Text>
                                     <img src={img6} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p>Blend together your favorite fruits, such as berries, banana, and yogurt, with a splash of milk or juice until smooth.</p>
                                 </Card.Text>
                             </Card.Body>
@@ -60,6 +63,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Instant Ramen Noodles:</Card.Title>
                                 <Card.Text>
                                     <img src={img} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p> Simply boil water, add the noodles and seasoning packet, and cook for 2 minutes until the noodles are tender.</p>
                                 </Card.Text>
                             </Card.Body>
@@ -73,6 +77,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Microwave Scrambled Eggs:</Card.Title>
                                 <Card.Text>
                                     <img src={img2} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p>Beat eggs in a microwave-safe bowl, add salt and pepper, and microwave on high for 1-2 minutes, stirring every 30 seconds, until the eggs are set.</p>
                                 </Card.Text>
                             </Card.Body>
@@ -86,6 +91,7 @@ const FoodMakingProcess = () => {
                                 <Card.Title>Grilled Cheese Sandwich:</Card.Title>
                                 <Card.Text>
                                     <img src={img3} className="d-block w-100" alt="" />
+                                    <h1 className="text-success text-center">Making Process</h1>
                                     <p>: Place cheese between two slices of bread and cook in a preheated skillet over medium heat for about 1 minute on each side until the bread is toasted and the cheese is melted.</p>
                                 </Card.Text>
                             </Card.Body>
