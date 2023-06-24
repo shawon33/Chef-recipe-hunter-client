@@ -5,7 +5,7 @@ import Login from "../LoginSite/Login";
 import Register from "../LoginSite/Register";
 import Error from "../Header/ErrorPage/Error";
 import HealthTips from "../Home/ExtraSection/HealthTips";
-import FoodMakingProcess from "../Home/ExtraSection/FoodMakingProcess";
+
 import Blogs from "../Blogs/Blogs";
 
 const router = createBrowserRouter([
@@ -21,10 +21,6 @@ const router = createBrowserRouter([
         {
            path:'healthTips',
            element:<HealthTips></HealthTips>
-        },
-        {
-          path:'makingTips',
-          element:<FoodMakingProcess></FoodMakingProcess>
         },
         {
           path:'blogs',

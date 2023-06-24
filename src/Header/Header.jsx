@@ -27,7 +27,7 @@ const Header = () => {
 
                      <Link to='/healthTips' className="py-2 text-decoration-none ml-2">Good Health & Tips</Link>
 
-                     <Link to='/makingTips' className="py-2 text-decoration-none ml-2">Food Making Tips</Link>
+                     
 
                      <Link to='/blogs' className="py-2 text-decoration-none ml-2">Blogs</Link>
 
