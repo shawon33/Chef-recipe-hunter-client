@@ -11,7 +11,7 @@ import img5 from '../../photo/carosuel/slider3.jpg'
 
 const Banner = () => {
     return (
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5 rounded-3 ">
             <Container >
                 <div className="banner mt-5 ">
                     <Container>

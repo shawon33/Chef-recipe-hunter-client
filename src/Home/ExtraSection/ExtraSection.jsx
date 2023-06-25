@@ -7,7 +7,8 @@ import { GiBirdClaw, GiConcentrationOrb, GiFactory } from "react-icons/gi";
 const ExtraSection = () => {
     return (
         <Container >
-            <h1 className="text-success text-center mt-5 mb-5 bg-info-subtle ">Customer Safety</h1>
+            <h1 className="text-success text-center mt-5 mb-5 bg-light  ">Customer Safety</h1>
+            <hr />
             <CardGroup>
                 <Card>
                     <Card.Body>
@@ -34,7 +35,7 @@ const ExtraSection = () => {
                 <Card>
 
                     <Card.Body>
-                        <Card.Title><h1 className="text-success6"><GiFactory /></h1></Card.Title>
+                        <Card.Title><h1 className="text-success"><GiFactory /></h1></Card.Title>
                         <Card.Text>
                             <h1 className="text-success">100% Safe Making Process</h1>
                             <p>You Have Come the Right Place</p>
