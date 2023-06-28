@@ -1,37 +1,50 @@
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
-    const {signIn}= useContext(AuthContext);
+    const { signIn, googleLogin } = useContext(AuthContext);
+    const [success, setSuccess] = useState();
 
     const navigate = useNavigate();
 
     const location = useLocation();
     const from = location.state?.from.pathname || '/';
-   
 
-    const handelLogin = event =>{
-    
+    const handleGoogleLogin = () => {
+        console.log("google is comming");
+        googleLogin()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => {
+               console.log(error);
+            });
 
-        event.preventDefault(); 
+    }
+
+
+    const handelLogin = event => {
+        event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email,password);
+        console.log(email, password);
 
-        signIn(email,password)
-        .then(result=>{
-            const loggedUser =result.user;
-            console.log(loggedUser);
-            navigate(from,{replace: true})
-     
-        })
-        .catch(error=>{
-            console.log(error);
-        })
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                navigate(from, { replace: true })
+
+            })
+            .catch(error => {
+                console.log(error);
+            })
 
     }
     return (
@@ -62,15 +75,13 @@ const Login = () => {
                 <Form.Text className="text-success">
                     Do Not Have an Account ? <Link to='/register'>Register</Link>
                 </Form.Text>
-
-                <Form.Text className="text-success">
-
-                </Form.Text>
-
-                <Form.Text className="text-danger">
-
-                </Form.Text>
             </Form>
+            <Container>
+                <div className="mt-4 d-block ">
+                    <Button  onClick={handleGoogleLogin } variant="outline-success"><FaGoogle /> Sing in with Google</Button>{' '}
+                    <Button variant="outline-danger">Success</Button>{' '}
+                </div>
+            </Container>
         </Container>
     );
 };
