@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaGulp, FaUserCircle } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext/AuthProvider";
+import './HeaderCss/Header.css'
 
 
 const Header = () => {
@@ -34,7 +35,7 @@ const Header = () => {
 
                   <Nav>
                      {
-                     user&& <img src={user.photoURL} alt="" style={{height:40}} />
+                     user&& <div className="user-image-cycle"><img src={user.photoURL}  className="user-image-cycle img" alt="" style={{height:40}} /></div>
                            
                      }
 

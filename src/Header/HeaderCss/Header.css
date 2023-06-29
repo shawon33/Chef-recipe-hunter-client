@@ -1,0 +1,23 @@
+.user-image-cycle {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .user-image-cycle {
+      flex-wrap: wrap;
+    }
+  
+    .user-image-cycle img {
+      width: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .user-image-cycle img {
+      width: 100%;
+    }
+  }
+  
