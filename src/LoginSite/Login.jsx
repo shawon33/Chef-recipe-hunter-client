@@ -95,8 +95,8 @@ const Login = () => {
             </Form>
             <Container>
                 <div className="mt-4 d-block ">
-                    <Button onClick={handleGoogleLogin} variant="outline-dark"><FaGoogle /> Sing in with Google</Button>{' '}
-                    <Button onClick={handleGitHuLogin} variant="outline-dark"><FaGithub/>Sing in With GitHub</Button>{' '}
+                    <Button onClick={handleGoogleLogin} variant="outline-dark"><FaGoogle /> Sing in with Google</Button>
+                    <Button onClick={handleGitHuLogin} variant="outline-dark"><FaGithub/>Sing in With GitHub</Button>
                 </div>
             </Container>
         </Container>
