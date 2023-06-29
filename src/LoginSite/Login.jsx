@@ -1,12 +1,12 @@
-import { Button, Container, Form } from "react-bootstrap";
+import { Button, Container, Form, Toast } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { useContext, useState } from "react";
-import { FaGoogle } from "react-icons/fa";
+import { FaGift, FaGifts, FaGithub, FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
-    const { signIn, googleLogin } = useContext(AuthContext);
+    const { signIn, googleLogin, gitHuLogin } = useContext(AuthContext);
     const [success, setSuccess] = useState();
 
     const navigate = useNavigate();
@@ -15,18 +15,34 @@ const Login = () => {
     const from = location.state?.from.pathname || '/';
 
     const handleGoogleLogin = () => {
-        console.log("google is comming");
+        console.log("google is coming");
         googleLogin()
             .then((result) => {
                 const user = result.user;
                 console.log(user);
                 navigate(from, { replace: true })
+
             })
             .catch((error) => {
-               console.log(error);
+                console.log(error);
             });
 
     }
+
+    const handleGitHuLogin = () => {
+        console.log("Github is coming");
+        gitHuLogin()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch((error) => {
+                console.log(error);
+                const errorMessage = error.message;
+                console.log(errorMessage);
+            });
+    };
 
 
     const handelLogin = event => {
@@ -79,8 +95,8 @@ const Login = () => {
             </Form>
             <Container>
                 <div className="mt-4 d-block ">
-                    <Button  onClick={handleGoogleLogin } variant="outline-success"><FaGoogle /> Sing in with Google</Button>{' '}
-                    <Button variant="outline-danger">Success</Button>{' '}
+                    <Button onClick={handleGoogleLogin} variant="outline-dark"><FaGoogle /> Sing in with Google</Button>{' '}
+                    <Button onClick={handleGitHuLogin} variant="outline-dark"><FaGithub/>Sing in With GitHub</Button>{' '}
                 </div>
             </Container>
         </Container>

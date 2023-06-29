@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
     console.log(user);
@@ -13,9 +13,14 @@ const AuthProvider = ({children}) => {
 
 
     const googleProvider = new GoogleAuthProvider();
-    const googleLogin = () =>{
-        return signInWithPopup(auth,googleProvider);
+    const googleLogin = () => {
+        return signInWithPopup(auth, googleProvider);
     }
+
+    const gitHubProvider = new GithubAuthProvider();
+    const gitHuLogin = () => {
+        return signInWithPopup(auth, gitHubProvider);
+    };
 
 
 
@@ -26,7 +31,7 @@ const AuthProvider = ({children}) => {
     const signIn = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     };
-    const logOut = ()=>{
+    const logOut = () => {
         return signOut(auth);
     }
 
@@ -34,22 +39,23 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
             setUser(loggedUser)
         })
-        return()=>{
-         unsubscribe();
+        return () => {
+            unsubscribe();
         }
-    },[]);
+    }, []);
 
     const authInfo = {
         user,
         createUser,
         signIn,
         logOut,
-        googleLogin
+        googleLogin,
+        gitHuLogin
     }
 
     return (
         <AuthContext.Provider value={authInfo}>
-             {children}
+            {children}
         </AuthContext.Provider>
     );
 };
