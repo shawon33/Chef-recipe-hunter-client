@@ -34,9 +34,8 @@ const Header = () => {
 
                   <Nav>
                      {
-                     user ? <img src={user.photoURL} alt="" style={{height:40}} />
-                           :
-                           <FaUserCircle style={{ fontSize: '2rem' }}></FaUserCircle>
+                     user&& <img src={user.photoURL} alt="" style={{height:40}} />
+                           
                      }
 
                      <div className="px-4">
