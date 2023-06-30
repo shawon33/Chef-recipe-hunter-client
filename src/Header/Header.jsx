@@ -15,42 +15,42 @@ const Header = () => {
          .catch(error => console.log(error))
    }
    return (
-      <Container className="mt-4">
+      <div className="mt-4 mb-5">
+         <Container className="mt-4">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+               <Container>
+                  <h1 className="text-success"><FaGulp className="pb-2"></FaGulp>Coo<span className="text-warning">ked</span></h1>
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                  <Navbar.Collapse id="responsive-navbar-nav">
+                     <Nav className="mx-auto gap-2 ">
 
-         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-            <Container>
-               <h1 className="text-success"><FaGulp className="pb-2"></FaGulp>Coo<span className="text-warning">ked</span></h1>
-               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-               <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav className="mx-auto gap-2 ">
+                        <Link to='/' className="py-2 text-decoration-none">Home</Link>
 
-                     <Link to='/' className="py-2 text-decoration-none">Home</Link>
+                        <Link to='/healthTips' className="py-2 text-decoration-none ml-2">Good Health & Tips</Link>
 
-                     <Link to='/healthTips' className="py-2 text-decoration-none ml-2">Good Health & Tips</Link>
+                        <Link to='/blogs' className="py-2 text-decoration-none ml-2">Blogs</Link>
 
-                     <Link to='/blogs' className="py-2 text-decoration-none ml-2">Blogs</Link>
+                     </Nav>
 
-
-                  </Nav>
-
-                  <Nav>
-                     {
-                     user&& <div className="user-image-cycle"><img src={user.photoURL}  className="user-image-cycle img" alt="" style={{height:40}} /></div>
-                           
-                     }
-
-                     <div className="px-4">
+                     <Nav>
                         {
-                           user ?
-                              <Button onClick={handleLogOut} variant="secondary">LogOut</Button> :
-                              <Link to='/login'><Button variant="secondary">Login</Button></Link>
+                           user && <div className="user-image-cycle"><img src={user.photoURL} className="user-image-cycle img" alt="" style={{ height: 40 }} /></div>
+
                         }
-                     </div>
-                  </Nav>
-               </Navbar.Collapse>
-            </Container>
-         </Navbar>
-      </Container>
+
+                        <div className="px-4">
+                           {
+                              user ?
+                                 <Button onClick={handleLogOut} variant="secondary">LogOut</Button> :
+                                 <Link to='/login'><Button variant="secondary">Login</Button></Link>
+                           }
+                        </div>
+                     </Nav>
+                  </Navbar.Collapse>
+               </Container>
+            </Navbar>
+         </Container>
+      </div>
    );
 };
 

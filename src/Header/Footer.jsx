@@ -27,8 +27,8 @@ const Footer = () => {
                         </Col>
                         <Col sm={12} md={6}>
                             <h5>Contact</h5>
-                            <p>Email: info@example.com</p>
-                            <p>Phone: +1 123 456 7890</p>
+                            <p>Email: Shawon@example.com</p>
+                            <p>Phone: +88 01794236591</p>
                         </Col>
                     </Row>
                 </Container>
