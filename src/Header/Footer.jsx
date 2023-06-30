@@ -4,13 +4,14 @@ import { Col, Container, Row } from "react-bootstrap";
 const Footer = () => {
     return (
         <Container>
-            <footer className="bg-info text-center py-3 rounded-3 mt-5  ">
+            <footer className="bg-secondary text-center py-3 rounded-3 mt-5 text-light   ">
                 <Container>
                     <Row>
                         <Col sm={6} md={3}>
                             <h5>About</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <h1 className="text-">welcome To Our website !</h1>
                         </Col>
+
                         <Col sm={6} md={3}>
                             <h5>Links</h5>
                             <ul className="list-unstyled">
@@ -25,6 +26,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </Col>
+
                         <Col sm={12} md={6}>
                             <h5>Contact</h5>
                             <p>Email: Shawon@example.com</p>
