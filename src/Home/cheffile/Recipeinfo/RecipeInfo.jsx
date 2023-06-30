@@ -10,16 +10,16 @@ const RecipeInfo = ({ res }) => {
         <Container>
             <Row>
                 <Col md={4}>
-                    <Card style={{ width: '24rem' }}>
+                    <Card className='text-center' style={{ width: '24rem' }}>
                         <Card.Img variant="top" src={recipe_img} />
                         <Card.Body>
                             <Card.Title><span className='text-success-emphasis'>Recipe : <h1 className='text-primary fw-bolder '>{recipe_name}</h1></span></Card.Title>
                             <Card.Text>
-                                <p className='text-body fw-bold '>{ingredients}</p>
+                                <p className='text-body fw-bold '><span className='text-warning'>Ingredients:</span>{ingredients}</p>
                             </Card.Text>
                         </Card.Body>
                         <ListGroup className="list-group-flush">
-                            <ListGroup.Item><p className='text-warning-emphasis fw-bold'>{cooking_method}</p></ListGroup.Item>
+                            <ListGroup.Item><p className='text-warning-emphasis fw-bold'><span className='text-warning'>cooking_method:</span>{cooking_method}</p></ListGroup.Item>
                             <ListGroup.Item><CiStar className='text-warning fw-bolded'></CiStar>{rating}</ListGroup.Item>
                             <ListGroup.Item></ListGroup.Item>
                         </ListGroup>

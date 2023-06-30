@@ -27,23 +27,23 @@ const Recipe = () => {
 
             <Container >
                 <Row>
-                    <Col className="text-center bg-body-secondary  pt-5">
-                        <img src={chef_Picture} alt="" />
+                    <Col className="text-center md:bg-body-secondary">
+                        <Card style={{ width: '30rem', }}>
+                            <img src={chef_Picture} fluid alt="" />
+                        </Card>
                     </Col>
                     <Col>
-                        {/* <img src={banner1} alt="" className="float-end rounded" style={{ width: '500px', height: '600px' }} /> */}
-                        <div className=''>     
-                             <Card style={{ width: '30rem' }}>
+                        <Card style={{ width: '30rem', height: '30rem' }}>
                             <Card.Body>
                                 <Card.Title><h2 className='text-center'>Name:<span className='text-info bg-body-secondary p-1 rounded-1 '>{chef_Name}</span></h2></Card.Title>
                                 <Card.Text>
-                                    <p className='fw-bold'>  {short_bio}</p>
-                                    <p className='fw-bold'>  {likes}</p>
-                                    <p className='fw-bold'>  {number_of_recipes}</p>
-                                    <p className='fw-bold'>  {experience}</p>
+                                    <p className='fw-bold'> Short_bio:<>{short_bio}</>  </p>
+                                    <p className='fw-bold'>Likes: <h1 className='text-success'>{likes}</h1></p>
+                                    <p className='fw-bold'>Number_of_recipes: <h1 className='text-success'>{number_of_recipes}</h1></p>
+                                    <p className='fw-bold'>Experience  <h1 className='text-success'>{experience}</h1></p>
                                 </Card.Text>
                             </Card.Body>
-                        </Card></div>
+                        </Card>
                     </Col>
                 </Row>
             </Container>
