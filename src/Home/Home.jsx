@@ -6,7 +6,7 @@ import CookedChef from "./cheffile/CookedChef";
 
 const Home = () => {
     return (
-        <div className="my-4">
+        <div className="my-4 ">
             <Banner></Banner>
             <CookedChef></CookedChef>
             <ExtraSection></ExtraSection>

@@ -9,19 +9,19 @@ const Banner = () => {
     return (
         <div className="mt-5 mb-5 rounded-3 ">
             <Container >
-                <div className="banner mt-5 border-secondary  ">
+                <div className="banner mt-5 border-secondary ">
                     <Container>
                         <Row>
-                            <Col className="text-center bg-body-secondary ">
+                            <Col className="text-center bg-body-secondary  pt-5">
                                 <h1 className="fw-bold"><span className="text-success">Welcome </span> <br />To Our Website!</h1>
-                                <p className="text-center mt-4 fs-1 text-warning  mb-5   ">
+                                <p className="text-center mt-4 fs-1 text-warning  mb-5 fw-bold  ">
                                     I am hun-gry, oh so hun-gry, < br />
                                     Crav-ing fla-vors that de-light.< br />
                                     Siz-zling sounds and aro-mas,< br />
                                     Tempt-ing tast-es, pure de-light.</p>
                             </Col>
                             <Col>
-                                <img src={banner1} alt="" className=" rounded" style={{ width: '500px', height: '600px' }} />
+                                <img src={banner1} alt="" className="float-end rounded" style={{ width: '500px', height: '600px' }} />
                             </Col>
                         </Row>
                     </Container>
