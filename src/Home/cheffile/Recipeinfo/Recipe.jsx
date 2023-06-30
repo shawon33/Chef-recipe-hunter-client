@@ -1,33 +1,67 @@
 import React from 'react';
-import { Card, Container, ListGroup } from 'react-bootstrap';
+import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
+import RecipeInfo from './Recipeinfo';
+import './style/style.css'
 
 const Recipe = () => {
     const chefRecipes = useLoaderData();
-    const { _id, chef_Picture, short_bio, chef_Name, experience, number_of_recipes, likes } = chefRecipes;
+    const { _id, chef_Picture, short_bio, chef_Name, experience, number_of_recipes, likes, food_recipes } = chefRecipes;
 
 
     return (
-        <Container>
-            <Card style={{ width: '30rem' }}>
-                <Card.Img variant="top" src={chef_Picture} />
-                <Card.Body>
-                    <Card.Title>Chef Name :{chef_Name}</Card.Title>
-                    <Card.Text>
-                        {short_bio}
-                    </Card.Text>
-                </Card.Body>
-                <ListGroup className="list-group-flush">
-                    <ListGroup.Item>Experience :<span className="text-primary font-weight-bold">{experience}</span></ListGroup.Item>
-                    <ListGroup.Item>Number of Recipes :<span className="text-primary " >{number_of_recipes}</span></ListGroup.Item>
-                    <ListGroup.Item>Likes :<span className="text-primary">{likes}</span></ListGroup.Item>
-                </ListGroup>
-                <Card.Body>
-                    {/* <Link to={{`/chef/${_id}`}}></Link> */}
-                    <button><Link to={`/chef/${_id}`}>View recipes </Link></button>
-                </Card.Body>
-            </Card>
-        </Container>
+        <>
+            {/* <Container >
+                <div className='mb-5'>
+                    <Card style={{ width: '24rem' }}>
+                        <Card.Img variant="top" src={chef_Picture} />
+                        <Card.Body>
+                            <Card.Title><h2 className='text-center'>Name:<span className='text-info bg-body-secondary p-1 rounded-1 '>{chef_Name}</span></h2></Card.Title>
+                            <Card.Text>
+                              <p className='fw-bold'>  {short_bio}</p>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+            </Container> */}
+
+            <Container >
+                <Row>
+                    <Col className="text-center bg-body-secondary  pt-5">
+                        <img src={chef_Picture} alt="" />
+                    </Col>
+                    <Col>
+                        {/* <img src={banner1} alt="" className="float-end rounded" style={{ width: '500px', height: '600px' }} /> */}
+                        <div className=''>     
+                             <Card style={{ width: '30rem' }}>
+                            <Card.Body>
+                                <Card.Title><h2 className='text-center'>Name:<span className='text-info bg-body-secondary p-1 rounded-1 '>{chef_Name}</span></h2></Card.Title>
+                                <Card.Text>
+                                    <p className='fw-bold'>  {short_bio}</p>
+                                    <p className='fw-bold'>  {likes}</p>
+                                    <p className='fw-bold'>  {number_of_recipes}</p>
+                                    <p className='fw-bold'>  {experience}</p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card></div>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container>
+                <h1 className='text-center text-bg-success rounded mt-5'>Chef Recipes & Info</h1>
+                <p className='text-center text-bg-info  rounded mb-5'>Good for Health</p>
+                <div className='grid-container'>
+                    {
+                        food_recipes.map(res => <RecipeInfo
+                            key={res._id}
+                            res={res}
+                        ></RecipeInfo>)
+                    }
+                </div>
+
+            </Container>
+        </>
     );
 };
 
