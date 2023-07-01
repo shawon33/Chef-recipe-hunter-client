@@ -7,7 +7,7 @@ import Error from "../Header/ErrorPage/Error";
 import HealthTips from "../Home/ExtraSection/HealthTips";
 
 import Blogs from "../Blogs/Blogs";
-import RecipeInfo from "../Home/cheffile/Recipeinfo/Recipeinfo";
+// import RecipeInfo from "../Home/cheffile/Recipeinfo/Recipeinfo";
 import Recipe from "../Home/cheffile/Recipeinfo/Recipe";
 import PrivateRoute from "../AuthContext/PrivateRoute";
 

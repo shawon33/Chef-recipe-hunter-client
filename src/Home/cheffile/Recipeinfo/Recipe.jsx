@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import './style/style.css'
+import RecipeInfo from './RecipeInfo';
 
 const Recipe = () => {
     const chefRecipes = useLoaderData();
