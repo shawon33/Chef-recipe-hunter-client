@@ -9,7 +9,7 @@ import HealthTips from "../Home/ExtraSection/HealthTips";
 import Blogs from "../Blogs/Blogs";
 import RecipeInfo from "../Home/cheffile/Recipeinfo/Recipeinfo";
 import Recipe from "../Home/cheffile/Recipeinfo/Recipe";
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from "../AuthContext/PrivateRoute";
 
 const router = createBrowserRouter([
   {
