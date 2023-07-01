@@ -2,7 +2,7 @@ import { Button, Container, Form, Toast } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { useContext, useState } from "react";
-import { FaGift, FaGifts, FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {

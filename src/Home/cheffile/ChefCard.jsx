@@ -20,11 +20,6 @@ const ChefCard = ({ Chef }) => {
                             <p className="text-warning-emphasis fw-bold fst-italic bg-body-secondary "> {short_bio}</p>
                         </Card.Text>
                     </Card.Body>
-                    <ListGroup className="list-group-flush ">
-                        <ListGroup.Item><p className="fw-bold fst-italic fs-3">Experience :<span className="text-primary fw-bold fs-1">{experience}</span></p></ListGroup.Item>
-                        <ListGroup.Item><p className="fw-bold fst-italic fs-3">Number of Recipes :<span className="text-primary  fs-1 " >{number_of_recipes}</span></p></ListGroup.Item>
-                        <ListGroup.Item><p className="fw-bold fst-italic fs-3" >Likes :<span className="text-primary  fs-1">{likes}</span></p></ListGroup.Item>
-                    </ListGroup>
                     <Card.Body>
                         <Link to={`/chef/${_id}`}> <Button variant="secondary">View recipes</Button>{' '} </Link>
                     </Card.Body>
