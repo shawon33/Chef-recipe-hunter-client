@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
 import { useContext, useState } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
@@ -21,9 +22,19 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 navigate(from, { replace: true })
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Your success message goes here',
+                  });
 
             })
             .catch((error) => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred. Please try again.',
+                  });
                 console.log(error);
             });
 
@@ -36,9 +47,19 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 navigate(from, { replace: true });
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Your success message goes here',
+                  });
             })
             .catch((error) => {
                 console.log(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred. Please try again.',
+                  });
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
@@ -56,10 +77,20 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Your success message goes here',
+                  });
                 navigate(from, { replace: true })
 
             })
             .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'An error occurred. Please try again.',
+                  });
                 console.log(error);
             })
 

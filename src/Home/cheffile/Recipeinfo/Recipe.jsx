@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
-import RecipeInfo from './Recipeinfo';
 import './style/style.css'
 
 const Recipe = () => {
