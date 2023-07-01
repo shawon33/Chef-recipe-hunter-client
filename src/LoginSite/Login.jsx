@@ -94,7 +94,7 @@ const Login = () => {
                 </Form.Text>
             </Form>
             <Container>
-                <div className="mt-4 d-block ">
+                <div className="mt-4 d-block d-md-grid  ">
                     <Button onClick={handleGoogleLogin} variant="outline-dark"><FaGoogle /> Sing in with Google</Button>
                     <Button onClick={handleGitHuLogin} variant="outline-dark"><FaGithub/>Sing in With GitHub</Button>
                 </div>

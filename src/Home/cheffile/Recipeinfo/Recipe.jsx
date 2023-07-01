@@ -28,7 +28,7 @@ const Recipe = () => {
             <Container >
                 <Row>
                     <Col className="text-center md:bg-body-secondary">
-                        <Card style={{ width: '30rem', }}>
+                        <Card style={{ width: '20  rem', }}>
                             <img src={chef_Picture} fluid alt="" />
                         </Card>
                     </Col>

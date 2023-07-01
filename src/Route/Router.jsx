@@ -9,6 +9,7 @@ import HealthTips from "../Home/ExtraSection/HealthTips";
 import Blogs from "../Blogs/Blogs";
 import RecipeInfo from "../Home/cheffile/Recipeinfo/Recipeinfo";
 import Recipe from "../Home/cheffile/Recipeinfo/Recipe";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/chef/:id',
-        element: <Recipe></Recipe>,
+        element: <PrivateRoute><Recipe></Recipe></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/chef/${params.id}`)
       }
 
