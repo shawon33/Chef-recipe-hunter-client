@@ -7,12 +7,12 @@ import { FaGift, FaGifts, FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
     const { signIn, googleLogin, gitHuLogin } = useContext(AuthContext);
-    const [success, setSuccess] = useState();
+
 
     const navigate = useNavigate();
 
     const location = useLocation();
-    const from = location.state?.from.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     const handleGoogleLogin = () => {
         console.log("google is coming");
@@ -94,7 +94,7 @@ const Login = () => {
                 </Form.Text>
             </Form>
             <Container>
-                <div className="mt-4 d-block d-md-grid  ">
+                <div className="mt-4  ">
                     <Button onClick={handleGoogleLogin} variant="outline-dark"><FaGoogle /> Sing in with Google</Button>
                     <Button onClick={handleGitHuLogin} variant="outline-dark"><FaGithub/>Sing in With GitHub</Button>
                 </div>
