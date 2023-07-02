@@ -6,7 +6,7 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 const RecipeInfo = ({ res }) => {
-    console.log(res);
+   
     const { recipe_name, recipe_img, rating, ingredients, cooking_method } = res;
 
     const handleFavorite = ()=>{
